@@ -1,0 +1,30 @@
+{
+	"Datatable CI Controller": {
+		"scope": "php",
+		"prefix": "datatable_controller",
+		"body": [
+			"public function getData() {",
+				"\tif ($$this->input->is_ajax_request()) {",
+					"\t\t$$query = $$this->model->getData();\n",
+					"\t\t$$i = $$_POST['start'];",
+					"\t\t$$response = [];",
+					"\t\tforeach ($$query->result() as $$data) {",
+						"\t\t\t$$i++;\n",
+						"\t\t\t$$result = [];",
+						"\t\t\t$$result[] = $$i;\n",
+						"\t\t\t$$response[] = $$result;",
+					"\t\t}\n",
+					"\t\t$$output = array(",
+						"\t\t\t'draw'            => intval($$_POST['draw']),",
+						"\t\t\t'recordsTotal'    => intval($$this->model->countData()),",
+						"\t\t\t'recordsFiltered' => intval($$this->model->filteredData()),",
+						"\t\t\t'data'            => $$response",
+					"\t\t);",
+					"\t\t$$this->output($$output);",
+				"\t} else {",
+					"\t\tshow_404();",
+				"\t}",
+			"}"
+		]
+	}
+}
