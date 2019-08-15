@@ -11,6 +11,17 @@
 					"\t\turl: siteURL + '$1',",
 					"\t\ttype: 'POST'",
 				"\t},",
+				"\tcreatedRow: (row) => {",
+					"\t\tvar rows = row.cells[0].children[1].children",
+					"\t\tvar _edit = rows[0].children[0]",
+					"\t\tvar _delete = rows[1].children[0]\n",
+					"\t\t_edit.onclick = () => {",
+						"\t\topen(siteURL + '' + _edit.dataset.id, '_parent')",
+					"\t\t}\n",
+					"\t\t_delete.onclick = () => {",
+						"\t\tthis._delete(_delete.dataset.id)",
+					"\t\t}",
+				"\t},",
 				"\tcolumns: []",
 			"});"
 		]
