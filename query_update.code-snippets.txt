@@ -1,0 +1,10 @@
+{
+	"Codeigniter Query Update": {
+		"scope": "php",
+		"prefix": "query_update",
+		"body": [
+			"$$this->db->where($1);",
+			"$$this->db->update('$2', [$3]);"
+		]
+	}
+}

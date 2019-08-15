@@ -1,0 +1,9 @@
+{
+	"Codeigniter Query Insert": {
+		"scope": "php",
+		"prefix": "query_insert",
+		"body": [
+			"$$this->db->insert('$1', [$2]);"
+		]
+	}
+}
