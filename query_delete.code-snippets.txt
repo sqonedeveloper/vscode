@@ -1,0 +1,10 @@
+{
+	"Codeigniter Query Delete": {
+		"scope": "php",
+		"prefix": "query_delete",
+		"body": [
+			"$$this->db->where($1);",
+			"$$this->db->delete($2);"
+		]
+	}
+}
