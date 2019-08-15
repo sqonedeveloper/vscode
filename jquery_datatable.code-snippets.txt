@@ -4,7 +4,7 @@
 		"prefix": "jquery_datatable",
 		"body": [
 			"this.loadData = $('#datatable').DataTable({",
-				"\tordering: false,",
+				"\tordering: true,",
 				"\tprocessing: true,",
 				"\tserverSide: true,",
 				"\tajax: {",
