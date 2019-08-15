@@ -1,0 +1,42 @@
+{
+	"Datatable CI Model": {
+		"scope": "php",
+		"prefix": "datatable_model",
+		"body": [
+			"function getData() {",
+				"\t$$this->_queryData();",
+				"\tif ($$_POST['length'] != -1)",
+					"\t\t$$this->db->limit($$_POST['length'], $$_POST['start']);",
+				"\treturn $$this->db->get();",
+			"}\n",
+			"function countData() {",
+				"\t$$this->_queryData();",
+				"\treturn $$this->db->get()->num_rows();",
+			"}\n",
+			"function filteredData() {",
+				"\t$$this->_queryData();",
+				"\treturn $$this->db->count_all_results();",
+			"}\n",
+			"private function _queryData() {",
+				"\t$$this->db",
+					"\t\t->select('')",
+					"\t\t->from('');\n",
+				"\t$$i = 0;",
+				"\t$$column_search = [];",
+				"\tforeach ($$column_search as $$item) {",
+					"\t\tif ($$_POST['search']['value']) {",
+						"\t\t\tif ($$i === 0) {",
+							"\t\t\t\t$$this->db->group_start();",
+							"\t\t\t\t$$this->db->like($$item, $$_POST['search']['value']);",
+						"\t\t\t} else {",
+							"\t\t\t\t$$this->db->or_like($$item, $$_POST['search']['value']);",
+						"\t\t\t}\n",
+						"\t\t\tif (count($$column_search) - 1 == $$i)",
+							"\t\t\t\t$$this->db->group_end();",
+					"\t\t}",
+					"\t\t$$i++;",
+				"\t}",
+			"}"
+		]
+	}
+}
