@@ -1,0 +1,100 @@
+.lazy-load-image-background.blur {
+   filter: blur(15px);
+}
+
+.lazy-load-image-background.blur.lazy-load-image-loaded {
+   filter: blur(0);
+   transition: filter .3s;
+}
+
+.lazy-load-image-background.blur>img {
+   opacity: 0;
+}
+
+.lazy-load-image-background.blur.lazy-load-image-loaded>img {
+   opacity: 1;
+   transition: opacity .3s;
+}
+
+.dw-user-box .u-text {
+   position: absolute;
+   word-break: break-all;
+   padding-right: 10px;
+}
+
+.sidebar-nav>ul>li {
+   margin-bottom: 0 !important;
+}
+
+.page-wrapper {
+   background: #fff !important;
+}
+
+.sidebar-nav {
+   padding: 0 !important;
+}
+
+.sidebar-nav ul li a {
+   border-radius: 0 !important;
+}
+
+@media (min-width: 768px) {
+   .mini-sidebar .sidebar-nav #sidebarnav>li>a {
+      padding: 9px 30px !important;
+   }
+}
+
+.float-right {
+   float: right;
+}
+
+.btn {
+   border-radius: 0 !important;
+   font-weight: 600;
+}
+a {
+   font-weight: 500;
+}
+.form-control {
+   border-radius: 0 !important;
+}
+.invalid-feedback {
+   font-size: 12px;
+   margin-top: auto;
+   display: block
+}
+.form-group {
+   margin-bottom: 0 !important;
+}
+.row-actions {
+   color: #ddd;
+   font-size: 13px;
+   padding: 2px 0 0;
+   position: relative;
+   left: -9999em;
+}
+tr:hover .row-actions {
+   position: static;
+}
+.row-actions span:not(:first-child) {
+   padding-left: 10px;
+}
+.row-actions span {
+   color: #0073aa;
+}
+.row-actions span.delete {
+   color: #a00;
+}
+.row-actions span label {
+   cursor: pointer;
+}
+.row-actions span label:hover {
+   color: #124964;
+   box-shadow: 0 0 0 1px #5b9dd9, 0 0 2px 1px rgba(30,140,190,.8);
+   outline: 1px solid transparent;
+}
+.row-actions span.delete label:hover {
+   color: #a00;
+   box-shadow: 0 0 0 1px #a00, 0 0 2px 1px rgba(30,140,190,.8);
+   outline: 1px solid transparent;
+}
