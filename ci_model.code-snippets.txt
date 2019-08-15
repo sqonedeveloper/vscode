@@ -1,0 +1,14 @@
+{
+	"Codeigniter Model": {
+		"scope": "php",
+		"prefix": "ci_model",
+		"body": [
+			"defined('BASEPATH') || exit('No direct script access allowed.');\n",
+			"class ${TM_FILENAME/[\\.php-]//g} extends CI_Model {\n",
+				"\tpublic function __construct() {",
+					"\t\tparent::__construct();",
+				"\t}\n",
+			"}"
+		]
+	}
+}

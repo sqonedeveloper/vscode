@@ -1,0 +1,28 @@
+{
+	"Codeigniter Validation": {
+		"scope": "php",
+		"prefix": "ci_validation",
+		"body": [
+			"if ($$this->input->is_ajax_request()) {",
+				"\t$$response = ['status' => false, 'errors' => [], 'messages' => []];",
+				"\t$$validation = [",
+					"\t\t$1",
+				"\t];",
+				"\t$$this->form_validation->set_rules($$validation);",
+				"\tif ($$this->form_validation->run()) {",
+					"\t\t$$post = $$this->security->xss_clean($$_POST);",
+					"\t\t$$this->model->submit($$post);",
+					"\t\t$$response['status'] = true;",
+				"\t} else {",
+					"\t\tforeach ($$_POST as $$key => $$val) {",
+						"\t\t\t$$response['errors'][$$key] = form_error($$key) ? true : false;",
+						"\t\t\t$$response['messages'][$$key] = strip_tags(form_error($$key));",
+					"\t\t}",
+				"\t}",
+				"\t$$this->output($$response);",
+			"} else {",
+				"\texit('No direct script access allowed');",
+			"}"
+		]
+	}
+}

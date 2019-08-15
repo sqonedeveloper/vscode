@@ -1,0 +1,23 @@
+{
+	"Codeigniter Query Result Detail": {
+		"scope": "php",
+		"prefix": "query_detail",
+		"body": [
+			"$$query = $$this->db",
+			"\t->select('*')",
+			"\t->from($1)",
+			"\t->get();\n",
+			"if ($$query->num_rows() > 0) {",
+				"\t$$list_fields = $$query->list_fields();",
+				"\t$$data = $$query->row_array();\n",
+				"\t$$response = [];",
+				"\tforeach ($$list_fields as $$fields) {",
+					"\t\t$$response[$$fields] = (string) $$data[$$fields];",
+				"\t}",
+				"\treturn $$response;",
+			"} else {",
+				"\tshow_404();",
+			"}"
+		]
+	}
+}

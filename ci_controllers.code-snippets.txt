@@ -1,0 +1,21 @@
+{
+	"Codeigniter Controllers": {
+		"scope": "php",
+		"prefix": "ci_controllers",
+		"body": [
+			"defined('BASEPATH') || exit('No direct script access allowed.');",
+			"use \\Firebase\\JWT\\JWT;\n",
+			"class ${TM_FILENAME/[\\.php-]//g} extends CI_Controller {\n",
+				"\tpublic function __construct() {",
+					"\t\tparent::__construct();",
+				"\t}\n",
+				"\tpublic function index() {",
+					"\t\t$$this->data = [",
+						"\t\t\t'title' => '$1'",
+					"\t\t];\n",
+					"\t\t$$this->template($$this->data);",
+				"\t}\n",
+			"}"
+		]
+	}
+}

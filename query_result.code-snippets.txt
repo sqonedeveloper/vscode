@@ -1,0 +1,13 @@
+{
+	"Codeigniter Query Result Array": {
+		"scope": "php",
+		"prefix": "query_result",
+		"body": [
+			"$$query = $$this->db",
+			"\t->select('*')",
+			"\t->from($1)",
+			"\t->get();\n",
+			"return $$query->result_array();"
+		]
+	}
+}

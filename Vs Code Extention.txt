@@ -1,0 +1,27 @@
+Name: Auto Rename Tag
+Id: formulahendry.auto-rename-tag
+Description: Auto rename paired HTML/XML tag
+Version: 0.1.0
+Publisher: Jun Han
+VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag
+
+Name: Babel JavaScript
+Id: mgmcdermott.vscode-language-babel
+Description: VSCode syntax highlighting for today's JavaScript, ported from gandm's language-babel for Atom.
+Version: 0.0.23
+Publisher: Michael McDermott
+VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=mgmcdermott.vscode-language-babel
+
+Name: Bracket Pair Colorizer
+Id: coenraads.bracket-pair-colorizer
+Description: A customizable extension for colorizing matching brackets
+Version: 1.0.61
+Publisher: CoenraadS
+VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer
+
+Name: IntelliSense for CSS class names in HTML
+Id: zignd.html-css-class-completion
+Description: CSS class name completion for the HTML class attribute based on the definitions found in your workspace.
+Version: 1.19.0
+Publisher: Zignd
+VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=Zignd.html-css-class-completion
