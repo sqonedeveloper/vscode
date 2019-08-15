@@ -1,0 +1,21 @@
+{
+	"Axios Config": {
+		"scope": "javascript, javascriptreact",
+		"prefix": "axios",
+		"body": [
+			"this.setState({ btnLoading: true })",
+			"var formData = new FormData()\n",
+			"axios.",
+				"\tpost('', formData).",
+				"\tthen(res => {",
+					"\t\tvar response = res.data",
+				"\t}).",
+				"\tcatch(error => {",
+					"\t\tconsole.log('Error', error.message)",
+				"\t}).",
+				"\tfinally(() => {",
+					"\t\tthis.setState({ btnLoading: false })",
+				"\t})"
+		]
+	}
+}
