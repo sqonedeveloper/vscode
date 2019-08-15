@@ -1,0 +1,18 @@
+{
+	"Jquery datatable serverside": {
+		"scope": "javascript, javascriptreact",
+		"prefix": "jquery_datatable",
+		"body": [
+			"this.loadData = $('#datatable').DataTable({",
+				"\tordering: false,",
+				"\tprocessing: true,",
+				"\tserverSide: true,",
+				"\tajax: {",
+					"\t\turl: siteURL + '$1',",
+					"\t\ttype: 'POST'",
+				"\t},",
+				"\tcolumns: []",
+			"});"
+		]
+	}
+}
