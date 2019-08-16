@@ -39,7 +39,7 @@
 				"\t}\n",
 				"\t$$column = $$_POST['order'][0]['column'];",
 				"\t$$dir = $$_POST['order'][0]['dir'];",
-				"\t$$this->db->order_by();",
+				"\t$$this->db->order_by($$column_order[$$column], $$dir);",
 			"}"
 		]
 	}
