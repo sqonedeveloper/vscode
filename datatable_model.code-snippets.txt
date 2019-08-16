@@ -10,7 +10,7 @@
 				"\treturn $$this->db->get();",
 			"}\n",
 			"function countData() {",
-				"\t$$this->_queryData();",
+				"\t$$this->db->from($1);",
 				"\treturn $$this->db->get()->num_rows();",
 			"}\n",
 			"function filteredData() {",
@@ -23,6 +23,7 @@
 					"\t\t->from('');\n",
 				"\t$$i = 0;",
 				"\t$$column_search = [];",
+				"\t$$column_order = [];",
 				"\tforeach ($$column_search as $$item) {",
 					"\t\tif ($$_POST['search']['value']) {",
 						"\t\t\tif ($$i === 0) {",
@@ -35,7 +36,10 @@
 							"\t\t\t\t$$this->db->group_end();",
 					"\t\t}",
 					"\t\t$$i++;",
-				"\t}",
+				"\t}\n",
+				"\t$$column = $$_POST['order'][0]['column'];",
+				"\t$$dir = $$_POST['order'][0]['dir'];",
+				"\t$$this->db->order_by();",
 			"}"
 		]
 	}
